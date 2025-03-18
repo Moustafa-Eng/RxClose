@@ -9,9 +9,9 @@ import { HomeComponent } from './components/home/home.component';
 export const routes: Routes = [
 
 
+  {path: '', redirectTo: 'auth/home', pathMatch: 'full'},
   {path: 'signin', component: LoginComponent },
   {path : 'signup', component: RegisterComponent},
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
 
   {path: 'auth', component: AuthLayoutComponent, children: [
     {path: 'home', component: HomeComponent},
