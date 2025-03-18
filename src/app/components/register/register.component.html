@@ -1,36 +1,40 @@
-<div class="signup-container">
-  <div class="left-section">
-    <img style="height: 100%;" src="assets/images/login-signup.jpeg" alt="Signup Image" />
-  </div>
-  <div class="right-section">
-    <h2>Register a new account</h2>
-    <div class="social-buttons">
-      <button><i class="fab fa-google"></i></button>
-      <button><i class="fab fa-x-twitter"></i></button>
-      <button><i class="fab fa-github"></i></button>
-      <button><i class="fab fa-facebook"></i> </button>
+<div class="con">
+  <div class="parent">
+    <div class="signup-container">
+      <div class="left-section">
+        <img style="height: 100%;" src="assets/images/login-signup.jpeg" alt="Signup Image" />
+      </div>
+      <div class="right-section">
+        <h2>Register a new account</h2>
+        <div class="social-buttons">
+          <button><i class="fab fa-google"></i></button>
+          <button><i class="fab fa-x-twitter"></i></button>
+          <button><i class="fab fa-github"></i></button>
+          <button><i class="fab fa-facebook"></i> </button>
+        </div>
+        <p>or register with your email id</p>
+        <form>
+          <div class="input-container">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div class="input-container">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="User Name" required />
+          </div>
+          <div class="input-container">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div class="input-container">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" required />
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account?<a routerLink="/signin">Sign in</a></p>
+        
+      </div>
     </div>
-    <p>or register with your email id</p>
-    <form>
-      <div class="input-container">
-        <i class="fas fa-envelope"></i>
-        <input type="email" placeholder="Email" required />
-      </div>
-      <div class="input-container">
-        <i class="fas fa-user"></i>
-        <input type="text" placeholder="User Name" required />
-      </div>
-      <div class="input-container">
-        <i class="fas fa-envelope"></i>
-        <input type="email" placeholder="Email" required />
-      </div>
-      <div class="input-container">
-        <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password" required />
-      </div>
-      <button type="submit">Sign Up</button>
-    </form>
-    <p>Already have an account?<a routerLink="/auth/signin">Sign in</a></p>
-    
   </div>
 </div>

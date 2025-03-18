@@ -4,18 +4,21 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { BlankLayoutComponent } from './layouts/blank-layout/blank-layout.component';
+import { HomeComponent } from './components/home/home.component';
 
 export const routes: Routes = [
 
 
+  {path: 'signin', component: LoginComponent },
+  {path : 'signup', component: RegisterComponent},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+
   {path: 'auth', component: AuthLayoutComponent, children: [
-    {path: 'signin', component: LoginComponent },
-    {path : 'signup', component: RegisterComponent},
-    {path: '', redirectTo: 'login', pathMatch: 'full'},
+    {path: 'home', component: HomeComponent},
   ]},
 
 
-  {path: '', component: BlankLayoutComponent, children: [
+  {path: 'blank', component: BlankLayoutComponent, children: [
     
   ]},
 
