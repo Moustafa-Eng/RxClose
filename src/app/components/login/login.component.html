@@ -1,69 +1,30 @@
-<!-- login.component.html -->
-<div class="row col-sm-11 col-md-8 col-lg-12 slider-container">
-  <div class="card shadow-lg p-3 mb-5 bg-body rounded-5 bg-color">
-    <div class="card-body ">
-      <h2 class="text-center mb-4 main-color">Continue your learning journey with Examak</h2>
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-
-        <!-- Email -->
-        <div class="mb-3">
-          <label class="form-label text-white">Your email address</label>
-          <input 
-            type="email" 
-            class="form-control"
-            formControlName="email"
-            placeholder="Type your email address"
-            [class.is-invalid]="email?.invalid && (email?.dirty || email?.touched)"
-          >
-          @if (email?.invalid && (email?.dirty || email?.touched)) {
-            <div class="invalid-feedback">
-              @if (email?.errors?.['required']) {
-                <div>Email is required</div>
-              }
-              @if (email?.errors?.['email']) {
-                <div>Please enter a valid email</div>
-              }
-            </div>
-          }
-        </div>
-
-      
-        <!-- Password -->
-        <div class="mb-4">
-          <label class="form-label text-white">Password</label>  
-          <input 
-            type="password" 
-            class="form-control"
-            formControlName="password"
-            placeholder="Type your password"
-            [class.is-invalid]="password?.invalid && (password?.dirty || password?.touched)"
-          >
-          @if (password?.invalid && (password?.dirty || password?.touched)) {
-            <div class="invalid-feedback">
-              @if (password?.errors?.['required']) {
-                <div>Password is required</div>
-              }
-              @if (password?.errors?.['minlength']) {
-                <div>Password must be at least 8 characters</div>
-              }
-            </div>
-          }
-        </div>
-
-        <!-- Submit Button -->
-        <button 
-          type="submit" 
-          class="bg-white p-2 rounded cursor-pointer"
-          [disabled]="!loginForm.valid"
-        >
-          Sign In <i class="fas fa-check-circle"></i>
-        </button>
-      </form>
-
-      <div class="text-center mt-4">
-        <span class="text-white">Don't have an account? </span>
-        <a class="main-color" routerLink="/register">Sign Up</a>
-      </div>
+<div class="signin-container">
+  <div class="left-section">
+    <h2>Sign In to your account</h2>
+    <div class="social-buttons">
+      <button><i class="fab fa-google"></i></button>
+      <button><i class="fab fa-x-twitter"></i></button>
+      <button><i class="fab fa-github"></i></button>
+      <button><i class="fab fa-facebook"></i> </button>
     </div>
+    <p>or register with your email id</p>
+    <form>
+      <div class="input-container">
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Email" required />
+      </div>
+      <div class="input-container">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" required />
+      </div>
+      <button>Sign In</button>
+    </form>
+    <p>Don't have an account? <a routerLink="/auth/signup">Sign up</a></p>
+      <!-- Add Forget Password -->
+  <p> <a  style="color: gray;" routerLink="/auth/forget-password">Forgot Password?</a></p>
+  </div>
+
+  <div class="right-section">
+    <img style="height: 100%;" src="assets/images/login-signup.jpeg" alt="Signin Image" />
   </div>
 </div>

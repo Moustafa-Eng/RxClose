@@ -8,9 +8,9 @@ import { BlankLayoutComponent } from './layouts/blank-layout/blank-layout.compon
 export const routes: Routes = [
 
 
-  {path: '', component: AuthLayoutComponent, children: [
-    {path: 'login', component: LoginComponent },
-    {path : 'register', component: RegisterComponent},
+  {path: 'auth', component: AuthLayoutComponent, children: [
+    {path: 'signin', component: LoginComponent },
+    {path : 'signup', component: RegisterComponent},
     {path: '', redirectTo: 'login', pathMatch: 'full'},
   ]},
 

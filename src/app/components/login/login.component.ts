@@ -1,18 +1,34 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule, FormGroup } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { trigger, transition, animate, style } from '@angular/animations';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, CommonModule, RouterLink],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
+  animations: [
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({ transform: 'translateX(100%)', opacity: 0 }),
+        animate('300ms ease-in', style({ transform: 'translateX(0)', opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('300ms ease-out', style({ transform: 'translateX(-100%)', opacity: 0 }))
+      ])
+    ])
+  ]
 })
 export class LoginComponent {
   loginForm!:FormGroup;
 
-constructor(private fb : FormBuilder){}
-
+constructor(private router: Router, private fb : FormBuilder){}
+navigateToSignUp() {
+  this.router.navigate(['auth/signup']);
+}
   ngOnInit(){
     this.initializeForm();
   }

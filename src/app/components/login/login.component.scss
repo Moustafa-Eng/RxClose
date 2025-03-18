@@ -1,127 +1,134 @@
-/* General Styles */
-
-
-.main-color{
-  color:#C5D86D;
+.signin-container {
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.bg-color{
-  background-color: #0D1321 !important;
+.right-section {
+  flex: 1;
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //padding: 20px;
 }
 
-
-/* Login Container */
-.slider-container {
-  transform: translate(-100%);
-  background-color: #0D1321;
-  color: #f8f9fa;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  animation: slideDown 0.7s ease forwards;
-}
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.right-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0 10px 10px 0;
 }
 
-// /* Left Form Section */
-// .login-form-section {
-//   flex: 1;
+.left-section {
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+  background: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button {
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.social-buttons button {
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+}
+
+.social-buttons button:nth-child(1) { background: #db4437; } /* Google */
+.social-buttons button:nth-child(2) { background: #000; } /* X (Twitter) */
+.social-buttons button:nth-child(3) { background: #333; } /* GitHub */
+.social-buttons button:nth-child(4) { background: #1877f2; } /* Facebook */
+
+
+// .input-container {
 //   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-// }
-
-// /* Image Section */
-// .login-image-section {
-//   flex: 1;
 //   align-items: center;
-//   display: flex;
-//   justify-content: center;
-// }
-// .login-cards{
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// .custom-btn{
-//   color: #fff;
-//   background-color: #333333;
-//   border-width: 4px;
+//   margin: 10px 0;
+//   padding-left: 10px;
+//   border: 1px solid #ccc;
+//   border-radius: 5px;
+//   font-size: 16px;
+//   background: white;
 // }
 
-// .custom-btn:hover{
-//   color: #fff;
-//   border-color: var(--main-text-color);
-//   border-width: 4px;
-// }
+.input-container i {
+  margin-right: 10px;
+  color: gray;
+}
 
-// /* Button Group */
-// .btn-group-toggle .btn {
-//   width: 100%;
-//   padding: 10px 15px;
-//   font-size: 0.9rem;
-// }
-// img{
-//   border-radius: 10px;
-//   background-color: #f8f9fa;
-//   display: block;
-//   width: 100%;
-// }
-// h3{
-//   color: var(--main-text-color);
-// }
+.input-container input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+}
 
-// .btn-sign-in{
-//   background-color: #F5F5F5;
-//   font-weight: 700;
-//   transition: background-color 0.5s ease;
-// }
-// .btn-sign-in:hover{
-//   background-color: #333333;
-//   color: #ffffff;
-// }
+@media (max-width: 600px) {
+  .right-section {
+    display: none;
+  }
 
-// .custom-btn.active {
-//   color: #fff;
-//   border-color: var(--main-text-color);
-//   border-width: 4px;
-// }
-// .btn-group-toggle .btn i {
-//   margin-right: 5px;
-//   font-size: 30px;
-// }
+  .signin-container {
+    flex-direction: column;
+    box-shadow: none;
+  }
 
-// /* Form */
-// .form-group label {
-//   font-size: 0.9rem;
-//   font-weight: 600;
-// }
-
-// .input-group-text {
-//   background-color: #333;
-//   color: #f8f9fa;
-//   border: none;
-// }
-// .input-group {
-//   border: 1px solid #ffffff;
-// }
-// .input-group .form-control {
-//   background-color: #333;
-//   color: #f8f9fa;
-// }
-
-// /* Forgot Password Link */
-// .text-info {
-//   color: var(--main-text-color) !important;
-// }
-
-// @media screen and (max-width: 768px) {
-//   .login-container {
-//     border-radius: 0px;
-//   }
-// }
+  .left-section {
+    width: 100%;
+    padding: 20px;
+  }
+}
