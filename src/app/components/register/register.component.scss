@@ -1,0 +1,29 @@
+/* General Styles */
+
+.main-color{
+  color:#C5D86D;
+}
+
+.bg-color{
+  background-color: #0D1321 !important;
+}
+
+.slider-container{
+  transform: translate(-100%);
+  background-color: #0D1321;
+  color: #f8f9fa;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: slideDown 0.7s ease forwards;
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
