@@ -14,8 +14,43 @@
   align-items: center;
   justify-content: center;
   //padding: 20px;
+  position: relative;
 }
 
+.blur {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+}
+
+.img-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: white;
+  font-family: 'Inter';
+  font-weight: 500;
+  text-align: center;
+
+}
+
+button {
+  background: linear-gradient(9.01deg, #0150B7 -12.42%, #B2BBC7 162.96%);
+  color: white;
+  font-family: 'Inter';
+  cursor: pointer;
+  border: 0;
+  &:hover{
+    background: linear-gradient(162.96deg, #0150B7 -12.42%, #B2BBC7  150.1%);
+
+  }
+}
 .left-section img {
   max-width: 100%;
   height: auto;
@@ -64,16 +99,6 @@ form input {
   font-size: 16px;
 }
 
-form button {
-  padding: 12px;
-  background: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-top: 10px;
-}
 
 form button:hover {
   background: #0056b3;

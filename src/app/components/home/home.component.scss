@@ -1,16 +1,23 @@
+
 .hero-section {
   /* Make background gradient from left to right */
   background: linear-gradient(to left, #429BCB -50%, #ffffff 100%);
   padding: 50px 0;
+
 }
+
 .hero-title {
-  background: linear-gradient(to right, #BF7840, #429BCB); /* التدرج اللوني */
-  -webkit-background-clip: text; /* بيقص الخلفية بناءً على النص */
-  background-clip: text; 
-  -webkit-text-fill-color: transparent; /* يخلي النص نفسه شفاف عشان يظهر التدرج اللي وراه */
-  font-size: 3rem; /* حجم الخط */
-  font-weight: bold; /* تخانة الخط */
-  display: inline-block; /* عشان الخلفية تشتغل صح مع النص */
+  background: linear-gradient(269.98deg, #0282FF 17.4%, #906C56 71.76%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Mali';
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  letter-spacing: 0%;
+  -webkit-text-stroke: 2px #2a3b68;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 img {
@@ -25,17 +32,86 @@ img {
   margin-bottom: 20px;
   height: 400px;
   border: 1px solid black;
+  overflow: hidden;
 }
 
-.color-hedings{
-  color: #429BCB;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
+.color-hedings {
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  /* identical to box height */
+  color: #0A5EB0;
 }
-.color-serv-sec{
+
+.color-serv-sec {
   color: white;
 }
 
-.para-style{
-  color: #BF7840; line-height: 2; font-size: 20px;
+.para-style {
+  /* It helps you find medications by locating nearby pharmacies that have the medicine you need. */
+  font-family: 'Mate';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 46px;
+  color: #653B22;
+}
+
+.para-style2 {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0%;
+  color: #653B22;
+}
+
+.btn {
+  /* buttom */
+  background-color: rgba(10, 94, 176, 1);
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 20px;
+
+}
+.rounded-circle{
+  border: 2px solid #A39B9B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+.round{
+  box-sizing: border-box;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white; /* تصغير الإطار */
+  width: 80px; /* حجم الدائرة */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rounded-circle img{
+width: 80px;
+height: 125px;
+}
+@media (max-width: 1024px) {
+  .hero-title{
+      font-size: 3rem; 
+      line-height: 3rem; /* أصغر حجم عند الشاشات الصغيرة */
+  }
+  .para-style {
+    font-size: 1.5rem; 
+    line-height: 2rem; /* أصغر حجم عند الشاشات الصغيرة */
+
+  }
+  .btn {
+    /* buttom */
+    font-weight: 400;
+    font-size: 18px;
+  }
 }

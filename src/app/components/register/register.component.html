@@ -2,7 +2,14 @@
   <div class="parent">
     <div class="signup-container">
       <div class="left-section">
-        <img style="height: 100%;" src="assets/images/login-signup.jpeg" alt="Signup Image" />
+        <div class="blur"></div>
+        <div class="img-content d-flex justify-content-center align-items-center flex-column px-5">
+          <h2>Hello friend!</h2>
+          <p class="px-4">Please provide the information register you account</p>
+          <p class="pt-5">New here ? create a new account</p>
+          <button routerLink="/signin" class="text-decoration-none btn  mt-5 px-4">Sign in</button>
+        </div>
+        <img style="height: 100%;" src="assets/images/login.jpeg" alt="Signin Image"  class="object-fit-cover"/>
       </div>
       <div class="right-section">
         <h2>Register a new account</h2>
@@ -30,7 +37,7 @@
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Password" required />
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit" class="py-2 mt-3">Sign Up</button>
         </form>
         <p>Already have an account?<a routerLink="/signin">Sign in</a></p>
         

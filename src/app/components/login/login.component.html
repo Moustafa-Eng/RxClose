@@ -19,15 +19,21 @@
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Password" required />
           </div>
-          <button>Sign In</button>
+          <button class="py-2 my-4">Sign In</button>
         </form>
-        <p>Don't have an account? <a routerLink="/signup">Sign up</a></p>
           <!-- Add Forget Password -->
       <p> <a  style="color: gray;" routerLink="/auth/forget-password">Forgot Password?</a></p>
       </div>
     
       <div class="right-section">
-        <img style="height: 100%;" src="assets/images/login-signup.jpeg" alt="Signin Image" />
+        <div class="blur"></div>
+        <div class="img-content d-flex justify-content-center align-items-center flex-column px-5">
+          <h2>Welcome Back !</h2>
+          <p class="px-4">Please sign in into your account with the given details to continue</p>
+          <p>Already have an account ! Sign Up</p>
+          <button routerLink="/signup" class="text-decoration-none btn  mt-5 px-4">Sign up</button>
+        </div>
+        <img style="height: 100%;" src="assets/images/login.jpeg" alt="Signin Image"  class="object-fit-cover"/>
       </div>
     </div>
     </div>
