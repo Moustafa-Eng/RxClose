@@ -9,6 +9,7 @@ import { MostsearchListComponent } from './features/searchpage/components/mostse
 import { ContactpageComponent } from './features/contactuspage/contactpage/contactpage.component';
 import { CartListComponent } from './features/cart/components/cart-list/cart-list.component';
 import { CaregorylistComponent } from './features/category/caregorylist/caregorylist.component';
+import { ConvertAiComponent } from './features/ai/convert-ai/convert-ai.component';
 
 export const routes: Routes = [
 
@@ -16,12 +17,14 @@ export const routes: Routes = [
   { path: '', redirectTo: 'auth/home', pathMatch: 'full' },
   { path: 'signin', component: LoginComponent },
   { path: 'signup', component: RegisterComponent },
-  { path: 'auth', component: AuthLayoutComponent, children: [
+  {
+    path: 'auth', component: AuthLayoutComponent, children: [
       { path: 'home', component: HomeComponent },
       { path: 'search', component: MostsearchListComponent },
       { path: 'Contactus', component: ContactpageComponent },
       { path: 'cart', component: CartListComponent },
-      { path: 'category', component:CaregorylistComponent },
+      { path: 'category', component: CaregorylistComponent },
+      { path: 'convert', component: ConvertAiComponent },
     ]
   },
   {
