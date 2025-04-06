@@ -10,7 +10,12 @@
     font-family: "Mate SC";
 
 }
-
+.logo{
+    position: absolute;
+    top:-20%;
+    right: -24%;
+    z-index: -1;
+}
 .btn-primary {
     background-color: #5a82a8;
     border: none;
@@ -110,3 +115,12 @@ h2,
   .btn-start:hover {
     background-color: #2f5f96;
   }
+  @media (min-width: 993px) and (max-width: 1173px) {
+    .logo{
+        position: absolute;
+        top:-20%;
+        right: -26%;
+        z-index: -1;
+    }
+  }
+ 
