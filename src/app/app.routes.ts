@@ -16,7 +16,6 @@ export const routes: Routes = [
 
 
   { path: '', redirectTo: 'auth/home', pathMatch: 'full' },
-  { path: 'auth', redirectTo: 'auth/home', pathMatch: 'full' },
   { path: 'signin', component: LoginComponent },
   { path: 'signup', component: RegisterComponent },
   {
