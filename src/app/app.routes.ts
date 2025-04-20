@@ -10,6 +10,7 @@ import { ContactpageComponent } from './features/contactuspage/contactpage/conta
 import { CartListComponent } from './features/cart/components/cart-list/cart-list.component';
 import { CaregorylistComponent } from './features/category/caregorylist/caregorylist.component';
 import { ConvertAiComponent } from './features/ai/convert-ai/convert-ai.component';
+import { ProductDetailsComponent } from './features/product-details/product-details.component';
 
 export const routes: Routes = [
 
@@ -23,7 +24,15 @@ export const routes: Routes = [
       { path: 'search', component: MostsearchListComponent },
       { path: 'Contactus', component: ContactpageComponent },
       { path: 'cart', component: CartListComponent },
-      { path: 'category', component: CaregorylistComponent },
+      { path: 'category', component: CaregorylistComponent, children: [
+        { path: '', component: CaregorylistComponent },
+        { path: 'drugs', component: CaregorylistComponent },
+        { path: 'medical-supplies', component: CaregorylistComponent },
+        { path: 'fitness-nutrition', component: CaregorylistComponent },
+        { path: 'organic', component: CaregorylistComponent },
+        { path: 'home-care', component: CaregorylistComponent },
+      ]},
+      {path: "product-details", component: ProductDetailsComponent},
       { path: 'convert', component: ConvertAiComponent },
     ]
   },
