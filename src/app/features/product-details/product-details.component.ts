@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.scss'
 })
@@ -83,10 +83,11 @@ export class ProductDetailsComponent {
   }
 
   scrollLeft() {
-    const container = document.querySelector('.related-products-slider');
-    if (container) {
-      this.scrollAmount -= 200;
-      container.scrollTo({
+    if(isPlatformBrowser(PLATFORM_ID)) {
+      const container = document.querySelector('.related-products-slider');
+      if (container) {
+        this.scrollAmount -= 200;
+        container.scrollTo({
         left: this.scrollAmount,
         behavior: 'smooth'
       });
@@ -100,6 +101,7 @@ export class ProductDetailsComponent {
         });
       }
     }
+  }
   }
 
   scrollRight() {
