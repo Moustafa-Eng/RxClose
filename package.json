@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:EduQuiz": "node dist/edu-quiz/server/server.mjs"
+    "serve:ssr:RxClose": "node dist/rx-close/server/server.mjs"
   },
   "private": true,
   "dependencies": {
